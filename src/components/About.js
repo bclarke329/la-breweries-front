@@ -4,7 +4,7 @@ class About extends Component {
     render() {
         return (
             <div>
-                Louisiana Brew History
+                <h1>Louisiana Craft History</h1>
             </div>
         );
     }

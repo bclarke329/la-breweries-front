@@ -7,24 +7,14 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from './reducers/rootReducer';
-import Home from './components/Home'
-import About from './components/About'
-import AllBreweries from './components/AllBreweries'
-import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)) )
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="allbrews" component={AllBreweries} />
+  <Provider store={store}>  
       <App />
-      </Router>
   </Provider>,
   document.getElementById('root')
 );
