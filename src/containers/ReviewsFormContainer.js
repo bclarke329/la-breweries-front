@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addReview } from '../actions/reviewsActions'
 
 class ReviewsFormContainer extends Component {
 
@@ -16,10 +18,16 @@ class ReviewsFormContainer extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addReview(this.state)
+
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                         <label>Name</label>
                         <br />
                         <input type="text" value={this.state.name} onChange={this.handleChange} name="name"/>
@@ -39,4 +47,4 @@ class ReviewsFormContainer extends Component {
     }
 }
 
-export default ReviewsFormContainer;
+export default connect(null, { addReview })(ReviewsFormContainer);

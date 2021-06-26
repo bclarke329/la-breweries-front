@@ -5,8 +5,13 @@ import ReviewsFormContainer from './ReviewsFormContainer';
 
 class BreweriesContainer extends Component {
 
+    state = {
+        breweries: []
+    }
+
     componentDidMount() {
         this.props.fetchBreweries()
+
     }
 
     
@@ -15,10 +20,13 @@ class BreweriesContainer extends Component {
            <div>
                 Brewery Container
                 <ReviewsFormContainer />
+                
             </div>
         );
     }
 }
+
+
 
 
 
