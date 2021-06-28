@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { fetchBreweries } from '../actions/breweriesActions'
-import ReviewsFormContainer from './ReviewsFormContainer';
+// import { connect } from 'react-redux'
+// import ReviewsFormContainer from './ReviewsFormContainer';
 
 class BreweriesContainer extends Component {
 
-    state = {
-        breweries: []
-    }
-
-    componentDidMount() {
-        this.props.fetchBreweries()
-
-    }
-
-    
     render(){
+
+        const breweries = () => {
+            return this.props.breweries.map(brew => <li key={brew.id}>{brew.name}</li>)
+        }
         return (
            <div>
-                Brewery Container
-                <ReviewsFormContainer />
-                
+               <ul>
+               {this.breweries}
+               </ul>
             </div>
         );
     }
@@ -29,5 +22,4 @@ class BreweriesContainer extends Component {
 
 
 
-
-export default connect(null, { fetchBreweries })(BreweriesContainer)
+export default BreweriesContainer

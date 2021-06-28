@@ -6,7 +6,8 @@ class Home extends Component {
         return (
             <div>
                 <h1>Welcome to the Louisiana Craft Brewery Finder</h1>
-                 <h3>Here you can find all the craft breweries located in the entire state of Louisiana and see reviews from patrons.</h3>
+                 <h3>The pelican state is home to 30 breweries, each offering unique and delicious brews that have become a staple in the local culture.</h3>
+                 <h4>You're bound to find a can of Urban South's Paradise Park at a crawfish boil, or a can of Gnarly Barley's Jucifer in someone's hand during Mardi Gras.  </h4>
                  
                 <MapContainer />
                 
