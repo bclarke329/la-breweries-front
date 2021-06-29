@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import logos from '../images/brewery_logos.png'
 import { connect } from 'react-redux'
 import { fetchBreweries } from '../actions/breweriesActions'
+import {
+    BrowserRouter as Router,
+    // Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
-///parent component = read store and contain list that will have breweries 
+///component that renders the "view all" path and list of all breweries 
 
 class AllBreweries extends Component {
 
@@ -14,18 +20,16 @@ class AllBreweries extends Component {
 
     }
 
-    // breweries = () => {
-    // }
-
+    
     render() {
-        const breweries = this.props.breweries.map(brew => <li key={brew.id}>{brew.name}</li>)
-        console.log(this.props.breweries)
+        console.log(this.props)
+        const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link>{brew.name}</Link></li>)
+        // console.log(this.props.breweries)
         return (
             <div>
-                <img src={logos} alt="brewery_logos" id="brew-logos"/>
-                <h1>View All Breweries</h1>
-                <ul>
-                    {/* { this.props.breweries.map(brew => <li key={brew.id}>{brew.name}</li>) } */}
+                <img src={logos} alt="brewery_logos" width="950" height="450" className="center"/>
+                <h1>All Breweries</h1>
+                <ul className='brew-list'> 
                     {breweries}
                 </ul>
             </div>

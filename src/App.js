@@ -4,16 +4,21 @@ import About from './components/About'
 import './App.css'
 import AllBreweries from './components/AllBreweries'
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  // Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="wrapper"> 
       <Router>
        <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
-      <Route exact path="/allbreweries" component={AllBreweries} />
+      <Route exact path="/allbreweries" component={(routeInfo) => <AllBreweries routeData={routeInfo} />} />
       </Router>
     </div>
   );
