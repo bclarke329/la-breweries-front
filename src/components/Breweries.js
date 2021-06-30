@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logos from '../images/brewery_logos.png'
+// import logos from '../images/brewery_logos.png'
 import { connect } from 'react-redux'
 import { fetchBreweries } from '../actions/breweriesActions'
 import {
@@ -26,9 +26,9 @@ class Breweries extends Component {
         const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link to={`/breweries/${brew.id}`}>{brew.name}</Link></li>)
         // console.log(this.props.breweries)
         return (
-            <div>
-                <img src={logos} alt="brewery_logos" width="950" height="450" className="center"/>
-                <h1>All Breweries</h1>
+            <div className="brew-container">
+                {/* <img src={logos} alt="brewery_logos" width="950" height="450" className="center"/> */}
+                {/* <h1>All Breweries</h1> */}
                 <ul className='brew-list'> 
                     {breweries}
                 </ul>
