@@ -2,8 +2,9 @@ import React from 'react'
 import Home from './components/Home'
 import About from './components/About'
 import './App.css'
-import AllBreweries from './components/AllBreweries'
+import Breweries from './components/Breweries'
 import Navbar from './components/Navbar'
+import BreweryShow from './components/BreweryShow'
 import {
   BrowserRouter as Router,
   // Switch,
@@ -18,7 +19,14 @@ function App() {
        <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
-      <Route exact path="/allbreweries" component={(routeInfo) => <AllBreweries routeData={routeInfo} />} />
+      <Route  path="/breweries" component={(routeInfo) => <Breweries routeData={routeInfo} />} />
+      <Route path="/breweries/:id" component={(routeData) => {
+        console.log(routeData)
+        // const id = parseInt(routeData.match.params.id)
+        // const brew = this.state.brewery.find(i => i.id ===id)
+        return <BreweryShow />
+        } 
+      }/>brew
       </Router>
     </div>
   );

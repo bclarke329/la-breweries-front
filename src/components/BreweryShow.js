@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class BreweryContainer extends Component {
+class BreweryShow extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class BreweryContainer extends Component {
     }
 }
 
-export default BreweryContainer;
+export default BreweryShow;

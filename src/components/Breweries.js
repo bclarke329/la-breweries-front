@@ -3,16 +3,16 @@ import logos from '../images/brewery_logos.png'
 import { connect } from 'react-redux'
 import { fetchBreweries } from '../actions/breweriesActions'
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
     // Switch,
-    Route,
+    // Route,
     Link
   } from "react-router-dom";
 
 
 ///component that renders the "view all" path and list of all breweries 
 
-class AllBreweries extends Component {
+class Breweries extends Component {
 
     componentDidMount() { ///will be called auto when the componet is mounting for the first time 
         // console.log(this.props.breweries)
@@ -23,7 +23,7 @@ class AllBreweries extends Component {
     
     render() {
         console.log(this.props)
-        const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link>{brew.name}</Link></li>)
+        const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link to={`/breweries/${brew.id}`}>{brew.name}</Link></li>)
         // console.log(this.props.breweries)
         return (
             <div>
@@ -44,6 +44,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { fetchBreweries })(AllBreweries)
-
-
+export default connect(mapStateToProps, { fetchBreweries })(Breweries)
