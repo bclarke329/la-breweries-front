@@ -5,6 +5,7 @@ import './App.css'
 import Breweries from './components/Breweries'
 import Navbar from './components/Navbar'
 import BreweryShow from './components/BreweryShow'
+
 import {
   BrowserRouter as Router,
   // Switch,
@@ -17,16 +18,16 @@ function App() {
     <div className="wrapper"> 
       <Router>
        <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      {/* <Route  path="/breweries" component={(routeInfo) => <Breweries routeData={routeInfo} />} /> */}
-      <Route path="/breweries/:id" component={(routeData) => {
-        // console.log(routeData)
-        const id = parseInt(routeData.match.params.id)
-        console.log(id)
-        // const brew = this.state.brewery.find(i => i.id === id)
-        return <BreweryShow />
-        } 
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          {/* <Route  path="/breweries" component={(routeInfo) => <Breweries routeData={routeInfo} />} /> */}
+          <Route path="/breweries/:id" component={(routeData) => {
+            // console.log(routeData)
+            const id = parseInt(routeData.match.params.id)
+            console.log(id)
+            // const brew = this.state.brewery.find(i => i.id === id)
+            return <BreweryShow />
+            } 
       }/>
       </Router>
     </div>

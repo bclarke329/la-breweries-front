@@ -7,6 +7,7 @@ const BreweryShow = ({match, breweries}) => {
    return (
        <div>
            <h1>This a show page</h1>
+                <ReviewFormsContainer />
        </div>
    )
     
