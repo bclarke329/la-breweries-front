@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import ReviewFormsContainer from '../containers/ReviewsFormContainer'
+// import Breweries from './Breweries';
+// import { Link } from 'react-router-dom'
 
-class BreweryShow extends Component {
-    render() {
-        return (
-            <div>
-                <h1>This is a show route</h1>
-            </div>
-        );
-    }
+const BreweryShow = ({match, breweries}) => {
+   return (
+       <div>
+           <h1>This a show page</h1>
+       </div>
+   )
+    
 }
 
 export default BreweryShow;

@@ -5,9 +5,10 @@ import { fetchBreweries } from '../actions/breweriesActions'
 import {
     // BrowserRouter as Router,
     // Switch,
-    // Route,
+    Route,
     Link
   } from "react-router-dom";
+  import BreweryShow from './BreweryShow';
 
 
 ///component that renders the "view all" path and list of all breweries 
@@ -22,8 +23,9 @@ class Breweries extends Component {
 
     
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link to={`/breweries/${brew.id}`}>{brew.name}</Link></li>)
+
         // console.log(this.props.breweries)
         return (
             <div className="brew-container">

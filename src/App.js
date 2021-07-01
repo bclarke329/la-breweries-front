@@ -21,9 +21,10 @@ function App() {
       <Route exact path="/about" component={About} />
       {/* <Route  path="/breweries" component={(routeInfo) => <Breweries routeData={routeInfo} />} /> */}
       <Route path="/breweries/:id" component={(routeData) => {
-        console.log(routeData)
-        // const id = parseInt(routeData.match.params.id)
-        // const brew = this.state.brewery.find(i => i.id ===id)
+        // console.log(routeData)
+        const id = parseInt(routeData.match.params.id)
+        console.log(id)
+        // const brew = this.state.brewery.find(i => i.id === id)
         return <BreweryShow />
         } 
       }/>
