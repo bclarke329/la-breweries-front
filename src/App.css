@@ -18,6 +18,10 @@ body {
     margin-right: auto;
 }
 
+.brew-hist p{
+    font-size: 20px;
+}
+
 .brew-list {
     text-align: center;
     list-style-type: none;
@@ -42,11 +46,6 @@ body {
     color: black;
 }
 
-/* .nav-bar a.active {
-    background-color: #04AA6D;
-    color: white;
-} */
-
 .wrapper {
         background: #fff;
         -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -67,5 +66,15 @@ body {
 .goog-map {
     padding: 0px;
     float: right;
+}
+
+.footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: gray;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 

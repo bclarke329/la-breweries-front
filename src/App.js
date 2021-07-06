@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 // import { connect } from 'react-redux'
 // import { fetchBreweries } from './actions/breweriesActions'
 import BreweryContainer from './components/BreweryContainer'
-
+import Footer from './components/Footer'
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +30,7 @@ function App() {
        
       </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
