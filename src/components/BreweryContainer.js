@@ -28,11 +28,12 @@ class BreweryContainer extends Component {
                         <Breweries/>
                     </Route>
                     <Route  path="/breweries/:id" component={(routeData) => {
-                        console.log(routeData)
+                        // console.log(routeData)
                         const id = parseInt(routeData.match.params.id)
-                        
                         const brewery = this.props.breweries.find(i => i.id === id)
-                        return !!brewery ?  <BreweryShow  breweries={brewery}/> : <div>404 page not found</div>
+
+                        return !!brewery ?  <BreweryShow  brewery={brewery}/> : <div>404 page not found</div>
+
                      }
                     } />
 
