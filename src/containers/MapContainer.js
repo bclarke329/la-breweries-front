@@ -49,7 +49,7 @@ class MapContainer extends Component {
 
     render() {
         return (
-            <div className="goog-map">
+            <div>
                 <Map
                 google={this.props.google}
                 zoom={8}

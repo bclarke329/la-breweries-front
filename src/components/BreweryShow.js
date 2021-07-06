@@ -1,16 +1,21 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 import ReviewFormsContainer from '../containers/ReviewsFormContainer'
-// import Breweries from './Breweries';
-// import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
 
-const BreweryShow = ({match, breweries}) => {
+
+
+const BreweryShow = (props) => {
    return (
        <div>
-           <h1>This a show page</h1>
+           <h1>show</h1>
+           
                 <ReviewFormsContainer />
+            
        </div>
    )
     
 }
+
+
 
 export default BreweryShow;
