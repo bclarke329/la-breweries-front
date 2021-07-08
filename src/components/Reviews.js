@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchReviews } from '../actions/reviewsActions'
-import ReviewsFormContainer from '../containers/ReviewsFormContainer';
 
 class Reviews extends Component {
 
-    state = {
-        reviews: []
+    componentDidMount() {
+        this.props.fetchReviews()
     }
     
     render() {
         console.log(this.props)
 
-        const reviews = this.props.reviews.map(r => <li key={r.id}>{r.name}</li>)
-        const reviewTitle = this.props.reviews.map(r => <li key={r.id}>{r.title}</li>)
-        const reviewDesc = this.props.reviews.map(r => <li key={r.id}>{r.review_desc}</li>)
-
+        const reviews = this.props.reviews.map(r => (
+            <li key={r.id}>{r.name}</li>,
+            <li key={r.id}>{r.title}</li>,
+            <li key={r.id}>{r.review_desc}</li>
+        ))
+        
         return (
             <div>
-                <ul>
+                <ul className="reviews">
                     {reviews}
-                    {reviewTitle}
-                    {reviewDesc}
                 </ul>
                 
             </div>
@@ -36,4 +35,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(Reviews)
+export default connect(mapStateToProps, { fetchReviews })(Reviews)

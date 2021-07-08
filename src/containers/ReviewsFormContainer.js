@@ -22,7 +22,12 @@ class ReviewsFormContainer extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addReview(this.state)
-        console.log(this.state)
+        
+        this.setState({
+            name: '',
+            title: '',
+            review_desc: '',
+        })
        
     }
     

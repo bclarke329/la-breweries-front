@@ -21,7 +21,7 @@ const BreweryShow = (props) => {
             <h3>Leave A Review</h3>
                 <ReviewFormsContainer id={props.id}/>
             
-            <Reviews reviews={props.reviews} />
+            <Reviews id={props.id} />
                     
 
        </div>
