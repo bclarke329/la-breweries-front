@@ -26,13 +26,13 @@ class Reviews extends Component {
         
         return (
             <div>
-              <ul className="reviews">
-               { filteredReviews.map(r => {
-                   <li>r.name</li>,
-                   <li>r.title</li>,
-                   <li>r.review_desc</li>
-               })}
-              </ul>
+                {filteredReviews.map(r => (
+                <ul className="reviews">
+                    <li>{r.name}</li>
+                    <li>{r.title}</li>
+                    <li>{r.review_desc}</li>
+                </ul>
+                ))}
             </div>
         );
     }
