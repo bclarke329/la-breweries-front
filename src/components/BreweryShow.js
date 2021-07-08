@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReviewFormsContainer from '../containers/ReviewsFormContainer'
+import Reviews from './Reviews';
+
 // import { connect } from 'react-redux';
 // import Breweries from './Breweries';
 // import { fetchBreweries } from '../actions/breweriesActions';
@@ -17,8 +19,11 @@ const BreweryShow = (props) => {
             <hr></hr>
 
             <h3>Leave A Review</h3>
-                <ReviewFormsContainer />
+                <ReviewFormsContainer id={props.id}/>
             
+            <Reviews id={props.id}/>
+                    
+
        </div>
    )
     

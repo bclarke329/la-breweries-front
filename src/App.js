@@ -20,16 +20,13 @@ function App() {
   return (
     <div className="wrapper"> 
       <Router>
-       <Navbar />
-       <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route path="/breweries" component={(routeInfo) => <BreweryContainer routeData={routeInfo} />} />
-              
-         
-       
-      </Switch>
-      </Router>
+        <Navbar />
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route path="/breweries" component={(routeInfo) => <BreweryContainer routeData={routeInfo} />} />
+          </Switch>
+        </Router>
       <Footer />
     </div>
   );

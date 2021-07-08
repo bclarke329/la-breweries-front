@@ -7,22 +7,25 @@ class ReviewsFormContainer extends Component {
     state = {
         name: '',
         title: '',
-        review_desc: ''
+        review_desc: '',
+        brewery_id: ''
     }
 
     handleChange = e => {
         const { name, value } = e.target
 
         this.setState({
-            [name]: value
+            [name]: value, brewery_id: this.props.id
         })
     }
 
     handleSubmit = e => {
         e.preventDefault()
         this.props.addReview(this.state)
-
+        console.log(this.state)
+        debugger
     }
+    
 
     render() {
         return (

@@ -49,7 +49,7 @@ class MapContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="goog-map">
                 <Map
                 google={this.props.google}
                 zoom={8}
@@ -67,6 +67,7 @@ class MapContainer extends Component {
 const mapStyles = {
     width: '30%',
     height: '40%'
+    
 }
 
 const API_KEY = process.env.REACT_APP_API_KEY
