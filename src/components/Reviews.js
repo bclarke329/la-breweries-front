@@ -9,20 +9,30 @@ class Reviews extends Component {
     }
     
     render() {
-        console.log(this.props)
+        // console.log(this.props)
 
-        const reviews = this.props.reviews.map(r => (
-            <li key={r.id}>{r.name}</li>,
-            <li key={r.id}>{r.title}</li>,
-            <li key={r.id}>{r.review_desc}</li>
-        ))
+        let reviews = this.props.reviews
+
+        const filteredReviews = reviews.filter( r => r.brewery_id === this.props.id)
+        
+        // const review = () => {
+        //     filteredReviews.map(r => (
+        //      <li>{r.name}</li>,
+        //      <p>{r.title}</p>,
+        //      <p>{r.review_desc}</p>
+        // ))}
+    
+        // console.log(filteredReviews)
         
         return (
             <div>
-                <ul className="reviews">
-                    {reviews}
-                </ul>
-                
+              <ul className="reviews">
+               { filteredReviews.map(r => {
+                   <li>r.name</li>,
+                   <li>r.title</li>,
+                   <li>r.review_desc</li>
+               })}
+              </ul>
             </div>
         );
     }
