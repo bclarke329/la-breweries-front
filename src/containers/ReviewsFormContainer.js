@@ -23,7 +23,7 @@ class ReviewsFormContainer extends Component {
         e.preventDefault()
         this.props.addReview(this.state)
         console.log(this.state)
-        debugger
+       
     }
     
 
@@ -49,5 +49,7 @@ class ReviewsFormContainer extends Component {
         );
     }
 }
+
+
 
 export default connect(null, { addReview })(ReviewsFormContainer);

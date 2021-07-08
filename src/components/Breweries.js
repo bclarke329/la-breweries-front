@@ -13,7 +13,6 @@ class Breweries extends Component {
     render() {
 
         const breweries = this.props.breweries.map(brew => <li key={brew.id}><Link to={`/breweries/${brew.id}`}>{brew.name}</Link></li>)
-
         return (
             
             <div className="brew-container">
