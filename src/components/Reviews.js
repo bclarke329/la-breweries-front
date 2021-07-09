@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchReviews } from '../actions/reviewsActions'
 
+
 class Reviews extends Component {
 
     componentDidMount() {
@@ -26,11 +27,13 @@ class Reviews extends Component {
         
         return (
             <div>
+                <h3>Reviews: </h3>
+                <p>Leave your first and last initial and tell others why you love this brewery!</p><br/>
                 {filteredReviews.map(r => (
                 <ul className="reviews">
-                    <li>{r.name}</li>
-                    <li>{r.title}</li>
-                    <li>{r.review_desc}</li>
+                    <li className="reviewer-name">{r.name}</li>
+                    <li className="review-title">{r.title}</li>
+                    <li className="review-desc">{r.review_desc}</li>
                 </ul>
                 ))}
             </div>

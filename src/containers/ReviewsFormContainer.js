@@ -22,7 +22,7 @@ class ReviewsFormContainer extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addReview(this.state)
-        
+
         this.setState({
             name: '',
             title: '',
@@ -46,7 +46,7 @@ class ReviewsFormContainer extends Component {
                         <br />
                         <label>Review</label>
                         <br />
-                        <input type="textarea" value={this.state.review_desc} onChange={this.handleChange} name="review_desc" />
+                        <textarea rows="5" cols="30" value={this.state.review_desc} onChange={this.handleChange} name="review_desc" />
                         <br />
                     <input type="submit" value="Submit Review" />
                 </form>
