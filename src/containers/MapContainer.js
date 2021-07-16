@@ -49,26 +49,19 @@ class MapContainer extends Component {
 
     render() {
         return (
-            <div className="goog-map">
-                <Map
-                google={this.props.google}
-                zoom={8}
-                style={mapStyles}
-                initialCenter={{ lat: 30.391830, lng: -92.329102 }}
-                >
-                {this.displayPoints()}
-                </Map>
-                
-            </div>
+            <Map
+            google={this.props.google}
+            zoom={8}
+            initialCenter={{ lat: 30.391830, lng: -92.329102 }}
+            className='goog-map'
+            >
+            {this.displayPoints()}
+            </Map>
         );
     }
 }
 
-const mapStyles = {
-    width: '30%',
-    height: '40%'
-    
-}
+
 
 const API_KEY = process.env.REACT_APP_API_KEY
 

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
 import MapContainer from '../containers/MapContainer';
 
 const About = () => {
     return (
-        <div classname="brew-hist">
+        <div className="brew-hist">
             <h1>Louisiana Craft History</h1>
             
                 <p>  

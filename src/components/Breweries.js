@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import logos from '../images/brewery_logos.png'
 import { connect } from 'react-redux'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class Breweries extends Component {

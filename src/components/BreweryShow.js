@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import ReviewFormsContainer from '../containers/ReviewsFormContainer'
 import Reviews from './Reviews';
 

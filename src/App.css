@@ -19,8 +19,9 @@ body {
     margin-right: auto;
 }
 
-.brew-hist.p{
+.brew-hist{
     font-size: 20px;
+    background: white;
 }
 
 .brew-list {
@@ -71,6 +72,7 @@ body {
         max-width: 1000px;
         padding: 2.25%; /* 18px / 800px */
         width: 85%;
+        /* height: 115%; */
 }
 
 .container {
@@ -80,8 +82,9 @@ body {
 }
 
 .goog-map {
-    padding: 0px;
-    float: left;
+    position: relative !important;
+    height: 300px !important;
+    width: 300px !important;
 }
 
 .footer{

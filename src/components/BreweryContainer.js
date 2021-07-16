@@ -5,10 +5,10 @@ import Breweries from './Breweries';
 import BreweryShow from './BreweryShow'
 
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    
   } from "react-router-dom";
 
 class BreweryContainer extends Component {
