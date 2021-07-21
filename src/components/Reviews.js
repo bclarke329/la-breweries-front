@@ -7,7 +7,7 @@ class Reviews extends Component {
 
     componentDidMount() {
         this.props.fetchReviews()
-        console.log(1)
+        console.log(4)
     }
     
     render() {

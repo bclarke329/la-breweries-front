@@ -17,6 +17,7 @@ class BreweryContainer extends Component {
 
     componentDidMount() {
         this.props.fetchBreweries()
+        console.log(1)
     }
 
     render() {
