@@ -16,7 +16,8 @@ It is a web application that let's users see a full list of craft breweries base
  This application uses React with Redux to manage application state in one place with a Rails backend API. 
 
  ### Stretch Goals
-Incorporate logo images to each "show" page 
-Expand associations to also show the beers each brewery offers
-Allow users to leave reviews on beers 
-Search bar that allows users to find breweries by parish or city 
+- Incorporate logo images to each "show" page 
+- Expand associations to also show the beers each brewery offers
+- Allow users to leave reviews on beers 
+- Search bar that allows users to find breweries by parish or city 
+- incorporate user authentication, so users have a profile 

@@ -15,16 +15,7 @@ class Reviews extends Component {
         let reviews = this.props.reviews
 
         const filteredReviews = reviews.filter( r => r.brewery_id === this.props.id)
-        
-        // const review = () => {
-        //     filteredReviews.map(r => (
-        //      <li>{r.name}</li>,
-        //      <p>{r.title}</p>,
-        //      <p>{r.review_desc}</p>
-        // ))}
-    
-        // console.log(filteredReviews)
-        
+     
         return (
             <div>
                 <h3>Reviews: </h3>
