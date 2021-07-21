@@ -7,6 +7,7 @@ class Reviews extends Component {
 
     componentDidMount() {
         this.props.fetchReviews()
+        console.log(1)
     }
     
     render() {
@@ -21,7 +22,7 @@ class Reviews extends Component {
                 <h3>Reviews: </h3>
                 <p>Leave your first and last initial and tell others why you love this brewery!</p><br/>
                 {filteredReviews.map(r => (
-                <ul className="reviews">
+                <ul key={r.id} className="reviews">
                     <li className="reviewer-name">{r.name}</li>
                     <li className="review-title">{r.title}</li>
                     <li className="review-desc">{r.review_desc}</li>

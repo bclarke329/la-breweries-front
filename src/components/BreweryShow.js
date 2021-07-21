@@ -10,6 +10,7 @@ import Reviews from './Reviews';
 
 
 const BreweryShow = (props) => {
+    console.log("3")
    return (
        <div>
            <h1>{props.brewery.name}</h1>
