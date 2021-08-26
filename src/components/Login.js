@@ -8,9 +8,13 @@ class Login extends Component {
                 <h2>Log in to save your favorite beers and leave comments for others to see.</h2>
                 <form>
                     <label>Username</label>
+                    <br />
                     <input type="text" />
+                    <br />
                     <label>Password</label>
+                    <br />
                     <input type="password" />
+                    <br />
                     <button type="submit">Log In</button>
                 </form>
             </div>
@@ -18,4 +22,4 @@ class Login extends Component {
     }
 }
 
-export default login;
+export default Login;

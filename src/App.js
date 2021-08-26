@@ -3,7 +3,7 @@ import Home from './components/Home'
 import About from './components/About'
 import './App.css'
 import Navbar from './components/Navbar'
-
+import Login from './components/Login'
 import BreweryContainer from './components/BreweryContainer'
 import Footer from './components/Footer'
 import {
@@ -22,6 +22,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={About} />
               <Route path="/breweries" component={(routeInfo) => <BreweryContainer routeData={routeInfo} />} />
+              <Route exact path="/login" component={Login} />
           </Switch>
         </Router>
       <Footer />
